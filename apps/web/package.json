@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "@reduxjs/toolkit": "2.2.6",
+    "@repo/ui": "workspace:*",
     "@tanstack/react-router": "1.43.2",
     "@tanstack/router-devtools": "1.43.2",
-    "@repo/ui": "workspace:*",
     "react": "18.3.1",
     "react-dom": "18.3.0",
     "react-intl": "6.6.8",
@@ -17,13 +17,14 @@
   },
   "devDependencies": {
     "@million/lint": "~1.0.0-rc.76",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/jest-presets": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@tanstack/router-plugin": "~1.43.1",
     "@types/react": "~18.3.1",
     "@types/react-dom": "~18.3.0",
     "@vitejs/plugin-react": "~4.3.1",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/jest-presets": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "autoprefixer": "~10.4.19",
     "knip": "~5.24.0",
     "postcss": "~8.4.39",
@@ -36,9 +37,9 @@
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
-    "clean": "",
     "dev": "vite --clearScreen false",
-    "lint": "eslint \"src/**/*.ts\"",
+    "lint:code": "eslint . --max-warnings 0",
+    "lint:style": "stylelint 'src/**/*'",
     "preview": "vite preview"
   },
   "type": "module"
