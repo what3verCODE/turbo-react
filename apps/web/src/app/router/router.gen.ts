@@ -27,107 +27,105 @@ const SchedulesLazyImport = createFileRoute('/schedules')()
 // Create/Update Routes
 
 const TagsLazyRoute = TagsLazyImport.update({
-  path: '/tags',
-  getParentRoute: () => rootRoute,
+    path: '/tags',
+    getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./../../pages/tags.lazy').then((d) => d.Route))
 
 const SchedulesLazyRoute = SchedulesLazyImport.update({
-  path: '/schedules',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./../../pages/schedules.lazy').then((d) => d.Route),
-)
+    path: '/schedules',
+    getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./../../pages/schedules.lazy').then((d) => d.Route))
 
 const TagsIndexRoute = TagsIndexImport.update({
-  path: '/',
-  getParentRoute: () => TagsLazyRoute,
+    path: '/',
+    getParentRoute: () => TagsLazyRoute,
 } as any)
 
 const SchedulesIndexRoute = SchedulesIndexImport.update({
-  path: '/',
-  getParentRoute: () => SchedulesLazyRoute,
+    path: '/',
+    getParentRoute: () => SchedulesLazyRoute,
 } as any)
 
 const TagsTagIdRoute = TagsTagIdImport.update({
-  path: '/$tagId',
-  getParentRoute: () => TagsLazyRoute,
+    path: '/$tagId',
+    getParentRoute: () => TagsLazyRoute,
 } as any)
 
 const SchedulesScheduleIdRoute = SchedulesScheduleIdImport.update({
-  path: '/$scheduleId',
-  getParentRoute: () => SchedulesLazyRoute,
+    path: '/$scheduleId',
+    getParentRoute: () => SchedulesLazyRoute,
 } as any)
 
 const SchedulesScheduleIdCopyRoute = SchedulesScheduleIdCopyImport.update({
-  path: '/$scheduleId/copy',
-  getParentRoute: () => SchedulesLazyRoute,
+    path: '/$scheduleId/copy',
+    getParentRoute: () => SchedulesLazyRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/schedules': {
-      id: '/schedules'
-      path: '/schedules'
-      fullPath: '/schedules'
-      preLoaderRoute: typeof SchedulesLazyImport
-      parentRoute: typeof rootRoute
+    interface FileRoutesByPath {
+        '/schedules': {
+            id: '/schedules'
+            path: '/schedules'
+            fullPath: '/schedules'
+            preLoaderRoute: typeof SchedulesLazyImport
+            parentRoute: typeof rootRoute
+        }
+        '/tags': {
+            id: '/tags'
+            path: '/tags'
+            fullPath: '/tags'
+            preLoaderRoute: typeof TagsLazyImport
+            parentRoute: typeof rootRoute
+        }
+        '/schedules/$scheduleId': {
+            id: '/schedules/$scheduleId'
+            path: '/$scheduleId'
+            fullPath: '/schedules/$scheduleId'
+            preLoaderRoute: typeof SchedulesScheduleIdImport
+            parentRoute: typeof SchedulesLazyImport
+        }
+        '/tags/$tagId': {
+            id: '/tags/$tagId'
+            path: '/$tagId'
+            fullPath: '/tags/$tagId'
+            preLoaderRoute: typeof TagsTagIdImport
+            parentRoute: typeof TagsLazyImport
+        }
+        '/schedules/': {
+            id: '/schedules/'
+            path: '/'
+            fullPath: '/schedules/'
+            preLoaderRoute: typeof SchedulesIndexImport
+            parentRoute: typeof SchedulesLazyImport
+        }
+        '/tags/': {
+            id: '/tags/'
+            path: '/'
+            fullPath: '/tags/'
+            preLoaderRoute: typeof TagsIndexImport
+            parentRoute: typeof TagsLazyImport
+        }
+        '/schedules/$scheduleId/copy': {
+            id: '/schedules/$scheduleId/copy'
+            path: '/$scheduleId/copy'
+            fullPath: '/schedules/$scheduleId/copy'
+            preLoaderRoute: typeof SchedulesScheduleIdCopyImport
+            parentRoute: typeof SchedulesLazyImport
+        }
     }
-    '/tags': {
-      id: '/tags'
-      path: '/tags'
-      fullPath: '/tags'
-      preLoaderRoute: typeof TagsLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/schedules/$scheduleId': {
-      id: '/schedules/$scheduleId'
-      path: '/$scheduleId'
-      fullPath: '/schedules/$scheduleId'
-      preLoaderRoute: typeof SchedulesScheduleIdImport
-      parentRoute: typeof SchedulesLazyImport
-    }
-    '/tags/$tagId': {
-      id: '/tags/$tagId'
-      path: '/$tagId'
-      fullPath: '/tags/$tagId'
-      preLoaderRoute: typeof TagsTagIdImport
-      parentRoute: typeof TagsLazyImport
-    }
-    '/schedules/': {
-      id: '/schedules/'
-      path: '/'
-      fullPath: '/schedules/'
-      preLoaderRoute: typeof SchedulesIndexImport
-      parentRoute: typeof SchedulesLazyImport
-    }
-    '/tags/': {
-      id: '/tags/'
-      path: '/'
-      fullPath: '/tags/'
-      preLoaderRoute: typeof TagsIndexImport
-      parentRoute: typeof TagsLazyImport
-    }
-    '/schedules/$scheduleId/copy': {
-      id: '/schedules/$scheduleId/copy'
-      path: '/$scheduleId/copy'
-      fullPath: '/schedules/$scheduleId/copy'
-      preLoaderRoute: typeof SchedulesScheduleIdCopyImport
-      parentRoute: typeof SchedulesLazyImport
-    }
-  }
 }
 
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren({
-  SchedulesLazyRoute: SchedulesLazyRoute.addChildren({
-    SchedulesScheduleIdRoute,
-    SchedulesIndexRoute,
-    SchedulesScheduleIdCopyRoute,
-  }),
-  TagsLazyRoute: TagsLazyRoute.addChildren({ TagsTagIdRoute, TagsIndexRoute }),
+    SchedulesLazyRoute: SchedulesLazyRoute.addChildren({
+        SchedulesScheduleIdRoute,
+        SchedulesIndexRoute,
+        SchedulesScheduleIdCopyRoute,
+    }),
+    TagsLazyRoute: TagsLazyRoute.addChildren({ TagsTagIdRoute, TagsIndexRoute }),
 })
 
 /* prettier-ignore-end */

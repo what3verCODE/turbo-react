@@ -1,4 +1,7 @@
-/** @type {import("syncpack").RcFile} */
+/**
+ * @see https://jamiemason.github.io/syncpack/config/syncpackrc/
+ * @type {import("syncpack").RcFile}
+ */
 module.exports = {
     versionGroups: [
         {
