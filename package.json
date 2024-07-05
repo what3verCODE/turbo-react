@@ -1,0 +1,20 @@
+{
+  "name": "workforce-management",
+  "devDependencies": {
+    "eslint": "~8.57.0",
+    "prettier": "~3.2.5",
+    "rimraf": "~5.0.7",
+    "syncpack": "~12.3.3",
+    "turbo": "~2.0.6"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo lint",
+    "syncpack": "syncpack lint",
+    "syncpack:fix": "syncpack fix-mismatches && syncpack format"
+  }
+}

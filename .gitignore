@@ -1,0 +1,24 @@
+# IDE specific
+.idea
+.vscode
+
+# OS specific
+.DS_Store
+
+# Node specific
+node_modules
+
+# Turbo specific
+.turbo
+
+# Env specific
+.env
+
+# Build specific
+dist
+
+# Etc
+*.log
+*.local
+
+.cache
