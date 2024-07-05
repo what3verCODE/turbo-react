@@ -1,5 +1,5 @@
-## Libraries usage
-# Default project checks
+# Libraries usage
+## Default project checks
 - eslint TODO add configurations as it should be + FSD
 - stylelint
 - prettier
@@ -7,10 +7,10 @@
 - knip (check for unused exports/files) TODO
 - million lint (works in runtime, frontend only) TODO check availability
 
-# Unit project checks
+## Unit project checks
 - jest TODO add testing configs as package
 
-# E2E project checks
+## E2E project checks
 - playwright
 
 # Base frontend stack (TBD)
@@ -29,15 +29,15 @@
 
 # UI docs (storybook?)
 
-## Run project variants
+# Run project variants
 
-# Production
+## Production
 NODE_ENV = production
 
-# Development
+## Development
 NODE_ENV = development
 
-# Testing
+## Testing
 NODE_ENV = production
 JEST = true
 PLAYWRIGHT = true
