@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "@million/lint": "~1.0.0-rc.76",
-    "@repo/eslint-config": "workspace:*",
     "@repo/jest-presets": "workspace:*",
     "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
