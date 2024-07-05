@@ -35,6 +35,6 @@
   "private": true,
   "scripts": {
     "lint:code": "eslint . --max-warnings 0",
-    "lint:style": "stylelint 'src/**/*'"
+    "lint:style": "stylelint '*.css'"
   }
 }

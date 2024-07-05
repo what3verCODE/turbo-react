@@ -12,8 +12,5 @@
     "browers.js",
     "node.js"
   ],
-  "private": true,
-  "scripts": {
-    "lint": "eslint . --max-warnings 0"
-  }
+  "private": true
 }

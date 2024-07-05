@@ -9,8 +9,5 @@
     "index.js"
   ],
   "license": "MIT",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  }
+  "main": "index.js"
 }

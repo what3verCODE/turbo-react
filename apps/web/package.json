@@ -39,7 +39,7 @@
     "build": "tsc && vite build",
     "dev": "vite serve --clearScreen false",
     "lint:code": "eslint . --max-warnings 0",
-    "lint:style": "stylelint 'src/**/*'",
+    "lint:style": "stylelint '*.css'",
     "preview": "vite preview"
   },
   "type": "module"
