@@ -2,9 +2,9 @@
 
 ## Default project checks
 
--   eslint TODO add configurations as it should be + FSD
+-   eslint TODO add configurations as it should be + FSD (to lint code rules, not file format)
 -   stylelint
--   prettier
+-   prettier (to format files indentations etc.)
 -   syncpack (validate package.json)
 -   knip (check for unused exports/files) TODO
 -   million lint (works in runtime, frontend only) TODO check availability
