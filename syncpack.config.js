@@ -1,5 +1,6 @@
-{
-    "versionGroups": [
+/** @type {import("syncpack").RcFile} */
+module.exports = {
+    versionGroups: [
         {
             "dependencies": [
                 "@repo/**"
@@ -7,44 +8,44 @@
             "isIgnored": true
         }
     ],
-    "semverGroups": [
+    semverGroups: [
         {
-            "range": "",
-            "dependencyTypes": [
+            range: "",
+            dependencyTypes: [
                 "prod",
                 "resolutions",
                 "overrides",
                 "pnpmOverrides",
                 "local"
             ],
-            "dependencies": [
+            dependencies: [
                 "**"
             ],
-            "packages": [
+            packages: [
                 "**"
             ]
         },
         {
-            "range": "~",
-            "dependencyTypes": [
+            range: "~",
+            dependencyTypes: [
                 "dev"
             ],
-            "dependencies": [
+            dependencies: [
                 "**"
             ],
-            "packages": [
+            packages: [
                 "**"
             ]
         },
         {
-            "range": "^",
-            "dependencyTypes": [
+            range: "^",
+            dependencyTypes: [
                 "peer"
             ],
-            "dependencies": [
+            dependencies: [
                 "**"
             ],
-            "packages": [
+            packages: [
                 "**"
             ]
         }
