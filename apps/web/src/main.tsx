@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import Application from "@app/Application";
 import { reportWebVitals } from "@shared/metrics/web-vitals";
 
-import '@repo/ui/index.css';
-import "./index.css"
+import '@repo/ui/globals.css';
 
 function bootstrap() {
   const element = document.getElementById("root");

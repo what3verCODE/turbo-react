@@ -37,7 +37,7 @@
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite --clearScreen false",
+    "dev": "vite serve --clearScreen false",
     "lint:code": "eslint . --max-warnings 0",
     "lint:style": "stylelint 'src/**/*'",
     "preview": "vite preview"
