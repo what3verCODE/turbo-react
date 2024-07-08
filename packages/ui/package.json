@@ -34,5 +34,6 @@
   "scripts": {
     "lint:code": "eslint . --max-warnings 0",
     "lint:style": "stylelint '*.css'"
-  }
+  },
+  "type": "module"
 }
