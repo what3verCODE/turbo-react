@@ -20,9 +20,9 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "clean": "turbo clean && rimraf './node_modules'",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo clean",
     "lint:code": "eslint .",
     "lint:code:inspect": "npx @eslint/config-inspect",
     "syncpack": "syncpack lint",
