@@ -17,9 +17,7 @@
   },
   "devDependencies": {
     "@million/lint": "~1.0.0-rc.76",
-    "@repo/eslint-config": "workspace:*",
     "@repo/jest-presets": "workspace:*",
-    "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@tanstack/router-plugin": "~1.43.1",
     "@types/react": "~18.3.1",
@@ -39,7 +37,7 @@
     "build": "tsc && vite build",
     "dev": "vite serve --clearScreen false",
     "lint:code": "eslint . --max-warnings 0",
-    "lint:style": "stylelint 'src/**/*'",
+    "lint:style": "stylelint '*.css'",
     "preview": "vite preview"
   },
   "type": "module"

@@ -4,7 +4,7 @@
  */
 
 /** @type {import("jest").Config} */
-module.exports = {
+export default {
     roots: ["<rootDir>"],
     transform: {
         "^.+\\.tsx?$": "ts-jest",

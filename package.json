@@ -2,11 +2,19 @@
   "name": "workforce-management",
   "version": "0.0.0",
   "devDependencies": {
-    "eslint": "~8.56.0",
+    "@eslint/eslintrc": "~3.1.0",
+    "@eslint/js": "~9.6.0",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "~9.1.0",
+    "eslint-plugin-jest": "~28.6.0",
+    "globals": "~15.8.0",
     "prettier": "~3.2.5",
     "rimraf": "~5.0.7",
+    "stylelint": "~16.6.1",
+    "stylelint-config-tailwindcss": "~0.0.7",
     "syncpack": "~12.3.3",
-    "turbo": "~2.0.6"
+    "turbo": "~2.0.6",
+    "typescript-eslint": "~7.15.0"
   },
   "packageManager": "pnpm@8.15.6",
   "private": true,
@@ -14,8 +22,10 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo lint",
+    "lint:code": "eslint .",
+    "lint:code:inspect": "npx @eslint/config-inspect",
     "syncpack": "syncpack lint",
     "syncpack:fix": "syncpack fix-mismatches && syncpack format"
-  }
+  },
+  "type": "module"
 }

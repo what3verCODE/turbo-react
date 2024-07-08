@@ -2,7 +2,7 @@
  * @see https://jamiemason.github.io/syncpack/config/syncpackrc/
  * @type {import("syncpack").RcFile}
  */
-module.exports = {
+export default {
     versionGroups: [
         {
             "dependencies": [

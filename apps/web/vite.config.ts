@@ -12,7 +12,7 @@ export default defineConfig((config) => {
         plugins: generatePlugins(
             [
                 // https://marketplace.visualstudio.com/items?itemName=million.million-lint
-                // { plugin: () => MillionCompiler.vite(), dev: true },
+                { plugin: () => MillionCompiler.vite(), dev: true, ignore: true },
                 { plugin: () => react() },
                 {
                     plugin: () =>

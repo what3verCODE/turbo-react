@@ -7,6 +7,8 @@
       "outputs": ["dist/**"]
     },
     "lint": {},
+    "lint:code": {},
+    "lint:style": {},
     "dev": {
       "cache": false,
       "persistent": true

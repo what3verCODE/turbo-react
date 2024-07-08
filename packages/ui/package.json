@@ -10,9 +10,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/jest-presets": "workspace:*",
-    "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/eslint": "~8.56.5",
     "@types/node": "~20.11.24",
@@ -35,6 +33,7 @@
   "private": true,
   "scripts": {
     "lint:code": "eslint . --max-warnings 0",
-    "lint:style": "stylelint 'src/**/*'"
-  }
+    "lint:style": "stylelint '*.css'"
+  },
+  "type": "module"
 }
