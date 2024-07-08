@@ -42,7 +42,8 @@
     "dev": "vite serve --clearScreen false",
     "lint:code": "eslint . --max-warnings 0",
     "lint:style": "stylelint '*.css'",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rimraf './node_modules' './dist' './.million'"
   },
   "type": "module"
 }
