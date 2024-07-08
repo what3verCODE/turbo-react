@@ -47,13 +47,18 @@ const compat = new FlatCompat({
 
 const jestConfig = jest.configs['flat/recommended'];
 
+/** @type {import('eslint').Linter.FlatConfig.Config[]} */
 export default [
     js.configs.recommended,
     ...ts.configs.recommended,
     ...ts.configs.stylistic,
     {
         name: "JavaScriptConfig",
-        files: ["**/*.jsx?"]
+        files: ["**/*.jsx?"],
+        languageOptions: {
+            ecmaVersion: 2020,
+            sourceType: "module"
+        }
     },
     {
         name: "TypeScriptConfig",
@@ -65,7 +70,9 @@ export default [
             parser: ts.parser,
             parserOptions: {
                 project: true
-            }
+            },
+            ecmaVersion: 2020,
+            sourceType: "module"
         }
     },
     {
@@ -95,5 +102,6 @@ export default [
             }
         },
         ...jestConfig,
-    }
+    },
+    prettier,
 ]
