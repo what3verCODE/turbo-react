@@ -1,6 +1,6 @@
 import { PluginOption } from 'vite'
 
-type PluginDescription = {
+interface PluginDescription {
     plugin: () => PluginOption | PluginOption[]
     dev?: boolean
     ignore?: boolean

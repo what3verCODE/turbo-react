@@ -1,5 +1,3 @@
-module.exports = {
-    extends: [
-        "@repo/stylelint-config"
-    ]
+export default {
+    extends: []
 }
