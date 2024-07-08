@@ -1,5 +1,5 @@
 import { CatchBoundary, Outlet, createLazyFileRoute } from '@tanstack/react-router'
-import { Button } from '@repo/ui'
+import { Button } from '~shared/ui/components'
 import { ErrorInfo } from 'react'
 
 export const Route = createLazyFileRoute('/schedules')({

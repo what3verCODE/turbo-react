@@ -12,5 +12,8 @@
     "browers.js",
     "node.js"
   ],
-  "private": true
+  "private": true,
+  "scripts": {
+    "clean": "rimraf './node_modules'"
+  }
 }
