@@ -42,7 +42,7 @@
     "build": "tsc && vite build",
     "clean": "rimraf './node_modules' './dist' './.million'",
     "dev": "vite serve --clearScreen false",
-    "lint:style": "stylelint '**/*.css'",
+    "lint:style": "stylelint '**/*.scss'",
     "preview": "vite preview"
   },
   "type": "module"
