@@ -1,4 +1,4 @@
-import { CatchBoundary, NotFoundError, Outlet, createLazyFileRoute } from '@tanstack/react-router'
+import { CatchBoundary, Outlet, createLazyFileRoute } from '@tanstack/react-router'
 import { ErrorInfo } from 'react'
 
 export const Route = createLazyFileRoute('/tags')({
@@ -21,6 +21,6 @@ function catchHandler(error: Error, info: ErrorInfo) {
     console.info('Detailed error info:', info)
 }
 
-function NotFoundFallback(error: NotFoundError) {
+function NotFoundFallback() {
     return <div>No Data</div>
 }
