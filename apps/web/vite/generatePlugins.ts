@@ -3,7 +3,7 @@ import { PluginOption } from 'vite'
 type PluginDescription = {
     plugin: () => PluginOption | PluginOption[]
     dev?: boolean
-    ignore?: boolean;
+    ignore?: boolean
 }
 
 export function generatePlugins(plugins: PluginDescription[], dev: boolean) {
