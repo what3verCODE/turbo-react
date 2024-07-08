@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Application from '~app/Application'
 import { reportWebVitals, type Reporter } from '~shared/metrics/web-vitals'
 
-import '~shared/ui/globals.css'
+import '~shared/ui/globals.scss'
 
 function bootstrap() {
     const element = document.getElementById('root')

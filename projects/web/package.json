@@ -31,6 +31,7 @@
     "autoprefixer": "~10.4.19",
     "knip": "~5.24.0",
     "postcss": "~8.4.39",
+    "sass": "^1.77.6",
     "tailwindcss": "~3.4.4",
     "typescript": "~5.3.3",
     "vite": "~5.1.4",
@@ -42,7 +43,7 @@
     "build": "tsc && vite build",
     "clean": "rimraf './node_modules' './dist' './.million'",
     "dev": "vite serve --clearScreen false",
-    "lint:style": "stylelint '**/*.css'",
+    "lint:style": "stylelint '**/*.scss'",
     "preview": "vite preview"
   },
   "type": "module"
