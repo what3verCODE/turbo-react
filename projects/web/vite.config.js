@@ -4,8 +4,8 @@ import { TanStackRouterVite as routerPlugin } from '@tanstack/router-plugin/vite
 import tsconfigPaths from 'vite-tsconfig-paths'
 import MillionCompiler from '@million/lint'
 
-import { generatePlugins } from './vite/generatePlugins'
-import { generateChunksObject } from './vite/generateChunks'
+import generatePlugins from './vite/generatePlugins.js'
+import generateChunksObject from './vite/generateChunks.js'
 
 export default defineConfig((config) => {
     return {

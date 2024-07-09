@@ -19,13 +19,13 @@ export default {
     },
     workspaces: {
         "projects/server": {
-            entry: ["src/main.tsx"],
-            project: ["**/*.ts"]
+            entry: ["src/main.ts"],
+            project: ["**/*.ts"],
         },
         "projects/web": {
             entry: ["src/main.tsx"],
             project: ["**/*.{ts,tsx}"],
-            ignore: ["src/vite-env.d.ts"]
+            ignore: ["src/vite-env.d.ts"],
         },
     },
     ignoreWorkspaces: ["projects/typescript-config", "projects/jest-presets", "projects/server"]
