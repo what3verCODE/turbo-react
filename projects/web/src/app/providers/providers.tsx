@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux'
-import { PersistGate } from 'redux-persist/integration/react'
-import store, { persistor } from '~app/store'
+import store from '~app/store'
 import { IntlProvider } from 'react-intl'
 
 interface IProviders {
@@ -24,9 +23,7 @@ function Providers({ children }: IProviders) {
 
     return (
         <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-                <IntlProvider locale="">{children}</IntlProvider>
-            </PersistGate>
+            <IntlProvider locale="">{children}</IntlProvider>
         </Provider>
     )
 }
