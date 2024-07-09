@@ -22,14 +22,11 @@
   },
   "devDependencies": {
     "@million/lint": "~1.0.0-rc.76",
-    "@repo/jest-presets": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "@tanstack/router-plugin": "~1.43.1",
     "@types/react": "~18.3.1",
     "@types/react-dom": "~18.3.0",
     "@vitejs/plugin-react": "~4.3.1",
     "autoprefixer": "~10.4.19",
-    "knip": "~5.24.0",
     "postcss": "~8.4.39",
     "sass": "^1.77.6",
     "tailwindcss": "~3.4.4",
@@ -44,7 +41,8 @@
     "clean": "rimraf './node_modules' './dist' './.million'",
     "dev": "vite serve --clearScreen false",
     "lint:style": "stylelint '**/*.scss'",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze-bundle": "vite-bundle-visualizer"
   },
   "type": "module"
 }
