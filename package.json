@@ -27,9 +27,9 @@
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint:code": "eslint .",
-    "lint:code:inspect": "@eslint/config-inspect",
+    "lint:code:inspect": "npx @eslint/config-inspector",
     "lint:style": "turbo lint:style",
-    "lint:exports": "knip --debug",
+    "lint:exports": "knip",
     "syncpack": "syncpack lint",
     "syncpack:fix": "syncpack fix-mismatches && syncpack format"
   },
