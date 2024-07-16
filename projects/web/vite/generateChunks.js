@@ -12,7 +12,7 @@ function isIncluded(array, str) {
 
 const react = ['react', 'react-dom']
 
-const redux = ['@reduxjs/toolkit', 'react-redux', 'redux-logger', 'redux-persist']
+const redux = ['@reduxjs/toolkit', 'react-redux', 'redux-logger']
 
 const i18n = ['react-intl']
 
