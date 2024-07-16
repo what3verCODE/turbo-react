@@ -1,6 +1,12 @@
-import { dependencies } from '../package.json'
+import packageJson from '../package.json' assert { type: "json" };
 
-function isIncluded(array: string[], str: string) {
+/**
+ *
+ * @param {string[]} array
+ * @param {string} str
+ * @returns boolean
+ */
+function isIncluded(array, str) {
     return array.some((x) => str.includes(x))
 }
 
@@ -12,11 +18,16 @@ const i18n = ['react-intl']
 
 const router = ['@tanstack/react-router']
 
-function existing(dependency: string) {
+/**
+ *
+ * @param {string} dependency
+ * @returns boolean
+ */
+function existing(dependency) {
     return isIncluded(react, dependency) || isIncluded(redux, dependency) || isIncluded(i18n, dependency) || isIncluded(router, dependency)
 }
 
-const vendor = Object.keys(dependencies).reduce<string[]>((acc, dependency) => {
+const vendor = Object.keys(packageJson.dependencies).reduce((acc, dependency) => {
     if (!existing(dependency)) {
         acc.push(dependency)
     }
@@ -24,7 +35,7 @@ const vendor = Object.keys(dependencies).reduce<string[]>((acc, dependency) => {
     return acc
 }, [])
 
-export function generateChunksObject() {
+export default function generateChunksObject() {
     const result = {
         react: react,
         redux: redux,

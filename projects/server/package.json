@@ -6,13 +6,16 @@
     "http-proxy": "1.18.1"
   },
   "devDependencies": {
-    "@repo/jest-presets": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "knip": "~5.24.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
     "typescript": "~5.3.3"
   },
   "private": true,
+  "type": "module",
   "scripts": {
+    "dev": "tsx src/main.ts",
     "clean": "rimraf './node_modules' './dist'"
   }
 }
