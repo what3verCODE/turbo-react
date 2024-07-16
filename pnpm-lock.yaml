@@ -12,7 +12,7 @@ importers:
         specifier: ~9.6.0
         version: 9.6.0
       '@types/node':
-        specifier: ^20.14.10
+        specifier: ~20.14.10
         version: 20.14.10
       eslint:
         specifier: ~8.57.0
@@ -29,24 +29,12 @@ importers:
       knip:
         specifier: ~5.24.0
         version: 5.24.1(@types/node@20.14.10)(typescript@5.3.3)
-      postcss-scss:
-        specifier: ~4.0.9
-        version: 4.0.9(postcss@8.4.39)
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
       rimraf:
         specifier: ~5.0.7
         version: 5.0.7
-      stylelint:
-        specifier: ~16.6.1
-        version: 16.6.1(typescript@5.3.3)
-      stylelint-config-recommended:
-        specifier: ~14.0.1
-        version: 14.0.1(stylelint@16.6.1(typescript@5.3.3))
-      stylelint-config-standard:
-        specifier: ~36.0.1
-        version: 36.0.1(stylelint@16.6.1(typescript@5.3.3))
       syncpack:
         specifier: ~12.3.3
         version: 12.3.3(typescript@5.3.3)
@@ -174,9 +162,24 @@ importers:
       postcss:
         specifier: ~8.4.39
         version: 8.4.39
+      postcss-nested:
+        specifier: ^6.0.1
+        version: 6.0.1(postcss@8.4.39)
+      postcss-scss:
+        specifier: ~4.0.9
+        version: 4.0.9(postcss@8.4.39)
       sass:
         specifier: ^1.77.6
         version: 1.77.6
+      stylelint:
+        specifier: ~16.6.1
+        version: 16.6.1(typescript@5.3.3)
+      stylelint-config-recommended:
+        specifier: ~14.0.1
+        version: 14.0.1(stylelint@16.6.1(typescript@5.3.3))
+      stylelint-config-standard:
+        specifier: ~36.0.1
+        version: 36.0.1(stylelint@16.6.1(typescript@5.3.3))
       tailwindcss:
         specifier: ~3.4.4
         version: 3.4.4(ts-node@10.9.2(@types/node@20.14.10)(typescript@5.3.3))
