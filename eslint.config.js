@@ -7,6 +7,12 @@ import prettier from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.FlatConfig.Config[]} */
 export default [
+    {
+        ignores: [
+            "**/node_modules/*",
+            "**/dist/*"
+        ]
+    },
     js.configs.recommended,
     ...ts.configs.recommended,
     ...ts.configs.stylistic,

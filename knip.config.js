@@ -31,6 +31,7 @@ export default {
     ignoreDependencies: [
         // npx scripts recognized as unlisted
         "@eslint/config-inspector",
+        "vite-bundle-visualizer",
         // used in stylelint config
         "postcss-scss",
     ],
