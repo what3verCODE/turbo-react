@@ -25,8 +25,14 @@ export default {
         "projects/web": {
             entry: ["src/main.tsx"],
             project: ["**/*.{ts,tsx}"],
-            ignore: ["src/vite-env.d.ts"],
+            // ignore: ["src/vite-env.d.ts"],
         },
     },
+    ignoreDependencies: [
+        // npx scripts recognized as unlisted
+        "@eslint/config-inspector",
+        // used in stylelint config
+        "postcss-scss",
+    ],
     ignoreWorkspaces: ["projects/typescript-config", "projects/jest-presets", "projects/server"]
 }
