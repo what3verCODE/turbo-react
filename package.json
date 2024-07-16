@@ -29,5 +29,8 @@
     "syncpack": "syncpack lint",
     "syncpack:fix": "syncpack fix-mismatches && syncpack format"
   },
+  "engines": {
+    "node": ">=18.20.0"
+  },
   "type": "module"
 }
